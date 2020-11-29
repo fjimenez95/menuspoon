@@ -1,0 +1,30 @@
+{
+  "name": "menuspoon",
+  "version": "1.0.0",
+  "description": "application to provide restaurant menus to users locally",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjimenez95/menuspoon.git"
+  },
+  "keywords": [
+    "menu",
+    "restaurant"
+  ],
+  "author": "Freddy Jimenez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fjimenez95/menuspoon/issues"
+  },
+  "homepage": "https://github.com/fjimenez95/menuspoon#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.18",
+    "morgan": "^1.10.0"
+  }
+}
