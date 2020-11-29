@@ -4,7 +4,50 @@ const mongoose = require('mongoose');
 // CREATE SHORTCUT VARIABLE
 const Schema = mongoose.Schema;
 
-// DEFINE EMBEDDED SCHEMA
+// DEFINE EMBEDDED SCHEMA (FOOD ITEM)
+const foodItemSchema = new Schema({
+    name: {
+        type: String,
+    },
+    description: {
+        type: String,
+    },
+    price: {
+        type: Number,
+        default: 0,
+    },
+    restaurant: {
+        type: Schema.Types.ObjectId,
+        ref: 'Restaurant',
+    },
+    category: {
+        type: String,
+        enum: ['appetizers', 'soups', 'salads', 'entrees', 'desserts', 'drinks'],
+    },
+    picture: {
+        type: String,
+    },
+    rating: {
+        type: Number,
+    },
+})
+
+
+// DEFINE EMBEDDED SCHEMA (MENU)
+const menuSchema = new Schema({
+    appetizers: [foodItemSchema],
+    soups: [foodItemSchema],
+    salads: [foodItemSchema],
+    entrees: [foodItemSchema],
+    desserts: [foodItemSchema],
+    drinks: [foodItemSchema],
+    restaurant: {
+        type: Schema.Types.ObjectId,
+        ref: 'Restaurant',
+    },
+});
+
+// DEFINE SCHEMA (RESTAURANT)
 const restaurantSchema = new Schema({
     name: {
         type: String,
@@ -21,8 +64,13 @@ const restaurantSchema = new Schema({
     },
     menu: {
         type: String,
+    }
+},
+    {
+        timestamps: true,
     },
-})
+);
 
 // EXPORT SCHEMA AS MODEL
 module.exports = mongoose.model('Restaurant', restaurantSchema);
+module.exports = mongoose.model('Menu', menuSchema);
