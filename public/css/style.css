@@ -1,0 +1,14 @@
+:root {
+    --menuspoon-brand-color: rgb(67, 115, 197);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--menuspoon-brand-color);
+  }
+
+  landing-logo {
+      flex-
+      align: center;
+  }
