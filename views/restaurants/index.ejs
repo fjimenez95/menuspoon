@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menuspoon - Restaurants</title>
+    <!-- Google Fonts -->
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
     <h1>Restaurants List</h1>
-    <a href="/">Go back to home</a>
+    <table>
+        <thead>
+            <th>Restaurant Name</th>
+            <th>Address</th>
+        </thead>
+        <tbody>
+            <% restaurants.forEach(restaurant => { %>
+                <tr>
+                    <td><%= restaurant.name %></td>
+                    <td><%= restaurant.address %></td>
+                    <td><a href="/menus/<%= restaurant.menu %>">Menu</a></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/restaurant/new">New Restaurant</a>
+    <a href="/">Go Back</a>
 </body>
 </html>
