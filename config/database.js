@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const db = mongoose.connection;
 
 // CONNECT TO DATABASE SERVER
-mongoose.connect('mongodb://localhost/flights',{ 
+mongoose.connect('mongodb://localhost/menuspoon',{ 
     useNewUrlParser: true, 
     useCreateIndex: true,
     useUnifiedTopology: true,
