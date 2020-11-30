@@ -8,6 +8,7 @@ const morgan = require('morgan');
 // ASSIGN ROUTERS
 const indexRouter = require('./routes/index');
 const restaurantRouter = require('./routes/restaurants');
+const menuRouter = require('./routes/menus');
 
 // CREATE EXPRESS APP
 const app = express();
@@ -23,7 +24,8 @@ app.use(express.urlencoded({ extended: false })); // BODY PARSER MIDDLEWARE
 
 // TODO: MOUNT ROUTES
 app.use('/', indexRouter);
-app.use('/restaurants', restaurantRouter)
+app.use('/restaurants', restaurantRouter);
+app.use('/menus', menuRouter);
 
 // TELL THE APP TO LISTEN ON DESIGNATED PORT
 app.listen(port, function() {
