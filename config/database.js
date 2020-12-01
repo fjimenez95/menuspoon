@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const db = mongoose.connection;
 
 // CONNECT TO DATABASE SERVER
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/menuspoon', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true

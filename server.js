@@ -33,7 +33,7 @@ app.use(express.urlencoded({ extended: false })); // BODY PARSER MIDDLEWARE - QU
 
 // MIDDWARE FOR GOOGLE OAUTH
 app.use(session({
-  secret: 'menuspoon-rocks!',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
 }));
