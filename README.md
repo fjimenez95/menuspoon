@@ -1,5 +1,5 @@
 # FORK FINDER APPLICATION
-A solution to help restaurants and users have a centralized location to find menus. Given the pandemic, we now find ourselves at restaursnts without paper menus, but instead with find resturant establishments in the city of choice, filtered by cuisine of choice. The application will allow you to search through cities that match your input and then show you a list of matching cuisines in that selected city. Based on the cuisine selection, the application will return the featured restaurants that meet the user-defined criteria. 
+A solution to help sers have a quick place to find menus to restaurants they are eating at or that they are near to. Given the pandemic, we now find ourselves at restaursnts without paper menus, but instead with restaurants that are providing QR codes for menus that lead you to websites that are not mobile-friendly, etc. The ultimate goal for this is to benefit both restaurants and users by providing a centralized platform to access menus.
 
 ## TECHNOLOGIES USED
 - HTML
@@ -9,6 +9,7 @@ A solution to help restaurants and users have a centralized location to find men
 - Node.js
 - Mongoose
 - MongoDB
+- Google OAuth
 
 ## SCREENSHOTS
 
