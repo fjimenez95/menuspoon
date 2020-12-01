@@ -1,7 +1,7 @@
-# FORK FINDER APPLICATION
+# menuspoon :iphone::fork_and_knife:
 A solution to help sers have a quick place to find menus to restaurants they are eating at or that they are near to. Given the pandemic, we now find ourselves at restaursnts without paper menus, but instead with restaurants that are providing QR codes for menus that lead you to websites that are not mobile-friendly, etc. The ultimate goal for this is to benefit both restaurants and users by providing a centralized platform to access menus.
 
-## TECHNOLOGIES USED
+## TECHNOLOGIES USED :computer:
 - HTML
 - CSS
 - JavaScript
@@ -11,7 +11,7 @@ A solution to help sers have a quick place to find menus to restaurants they are
 - MongoDB
 - Google OAuth
 
-## SCREENSHOTS
+## SCREENSHOTS :camera:
 
 ### WIREFRAME
 ![image](https://i.imgur.com/KIAnsld.png)
@@ -27,7 +27,7 @@ A solution to help sers have a quick place to find menus to restaurants they are
 ![image](https://i.imgur.com/StzkC2e.png)
 
 
-## PRODUCTION
+## PRODUCTION :mega:
 
 ### DEPLOYED PROJECT LINK
 https://menuspoon.herokuapp.com/
