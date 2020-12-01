@@ -1,35 +1,34 @@
 :root {
     --menuspoon-brand-color: rgb(67, 115, 197);
     --menuspoon-brand-font: 'futura';
-}
+    --menuspoon-brand-secondary-header-color: lightblue;
+  }
 
 * {
     box-sizing: border-box;
     margin: 0;
-    background-color: var(--menuspoon-brand-color);
     font-family: var(--menuspoon-brand-font);
   }
 
   body {
       display: flex;
       flex-direction: column;
-      height: 100vh;
   }
 
   #landing-logo {
       display: flex;
       justify-content: center;
       align-items: center;
+      background-color: var(--menuspoon-brand-color);      
   }
 
   #main-welcome {
-      color: white;
-      margin: 0 0 0 12.5%;
+      margin: 10% 0 3% 12.5%;
   }
 
-  #sign-in {
-    color: lightblue;
-    margin: 0 0 10px 12.5%
+  #sign-in, #find-menu-title {
+    color: var(--menuspoon-brand-secondary-header-color);
+    margin: 0 0 10px 12.5%;
   }
 
   #auth-buttons {
@@ -40,19 +39,67 @@
       flex-direction: column;
   }
 
-  #auth-buttons > div {
-    width: 75%;
-    border: solid;
-    border-color: black;
+  #auth-buttons > div, #find-menu-buttons > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
-  #auth-buttons > div > p {
-    padding: 10px;
-  }
 
   #rights-res {
-      color: lightblue;
+      color: var(--menuspoon-brand-secondary-header-color);
       font-size: 10px;
   }
 
-  
+    #link-homepage:link, #link-homepage:visited {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    padding: 14px 25px;
+    margin: 10px 0 0 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 75%;
+    border-radius: 10px;
+    border: solid;
+    border-color: lightgray;
+  }
+
+  /* #button-flx-ctr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  #find-menu-title {
+    margin: 0 0 0 12.5%;
+  }
+
+  #googleimg {
+    padding: 0 15px 0 0;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: lightgray;
+    color: white;
+    text-align: center;
+
+  }
+
+
+  #restaurant-list-header {
+    background-color: var(--menuspoon-brand-color);
+  }
