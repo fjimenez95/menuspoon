@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
+    <header id="restaurant-list-header">
+        <img src="/images/menuspoon_logo.jpg" alt="menu spoon" width="100">
+    </header>
+    <main>
+    <% restaurants.forEach(restaurant => { %>
+        <article id="restaurant-block">
+            
+        </article>
     <h1>Restaurants List</h1>
     <table>
         <thead>
@@ -27,5 +35,20 @@
     </table>
     <a href="/restaurant/new">New Restaurant</a>
     <a href="/">Go Back</a>
+    </main>
+    <footer>
+        <div>
+            <a href="/restaurants">A</a>
+        </div>
+        <div>
+            <a href="/menus">B</a>
+        </div>
+        <div>
+            <a href="/menus">C</a>
+        </div>
+        <div>
+            <a href="/menus">D</a>
+        </div>
+    </footer>
 </body>
 </html>

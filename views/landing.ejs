@@ -18,8 +18,42 @@
     <h1 id="main-welcome">welcome</h1>
     <% } %>
 
-    <p>Find your menu:</p>
-    <a href="/restaurants">See All Restaurants</a>
-    <a href="/menus">See All Menus</a>
+    <h3 id="find-menu-title">Find your menu:</h3>
+    <div id="find-menu-buttons">
+        <% if(user) { %>
+        <div>
+            <a id="link-homepage" href="/favorited-menus">Your saved menus</a>
+        </div>
+        <div>
+            <a id="link-homepage" href="/favorited-menus">Your menus</a>
+        </div>
+        <% } %>
+        <div>
+            <a id="link-homepage" href="/restaurants">Search All Restaurants</a>
+        </div>
+        <div>
+            <a id="link-homepage" href="/menus">Search All Menus</a>
+        </div>
+        <div>
+            <a id="link-homepage" href="/menus">Contact Support</a>
+        </div>
+        <div>
+            <a id="link-homepage" href="/menus">Test</a>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <a href="/restaurants">A</a>
+        </div>
+        <div>
+            <a href="/menus">B</a>
+        </div>
+        <div>
+            <a href="/menus">C</a>
+        </div>
+        <div>
+            <a href="/menus">D</a>
+        </div>
+    </footer>
 </body>
 </html>
