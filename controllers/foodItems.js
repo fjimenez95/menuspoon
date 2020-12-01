@@ -30,8 +30,10 @@ function deleteFoodItem(req, res) {
 function edit(req, res) {
     res.render('menus/edit', {
         foodItemId: req.params.id,
+        user: req.user,
         foodItem:  Menu.findOne( { "appetizers._id": req.params.id}, function(err, parentMenu) {
             console.log(parentMenu);
+            let parentMenuId = parentMenu._id;
         })
     })
 }
@@ -39,7 +41,7 @@ function edit(req, res) {
 function update(req, res) {
     console.log(req.body);
     console.log(req.body.name);
-    Menu.findOneAndUpdate( { "appetizers._id": req.params.id}, {$set:{'appetizers.$.name': req.body.name }}, function(err, parentMenu) {
+    Menu.findOneAndUpdate( { "appetizers._id": req.params.id}, {$set:{'appetizers.$.description': req.body.description }}, function(err, parentMenu) {
         res.redirect(`/menus/${parentMenu._id}`);
         // Menu.update({'_id': req.params.id},{$set:{'appetizers.$.name': req.body.name }}, { returnOriginal: false }, function(err, menu) {
         //     console.log(menu);

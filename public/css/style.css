@@ -95,13 +95,12 @@
   }
 
   #restaurant-list-title {
-    text-align: right;
+    color: white;
   }
 
   #thin-font {
-    font-family: var(--menuspoon-thin-font);
+    font-family: var(--menuspoon-brand-font);
     margin: 5% 0 0 5%;
-    font-weight: 100;
   }
 
   footer {
@@ -170,6 +169,7 @@
 
   .menu-header {
     margin: 0 0 0 10%;
+    font-family: var(--menuspoon-thin-font);
   }
 
   #menu-block {
@@ -196,6 +196,7 @@
 
 .item-desc {
   font-size: 11px;
+  font-family: var(--menuspoon-thin-font);
 }
 
 .item-name {
@@ -204,7 +205,7 @@
 
 #menu-img {
   height: 100%;
-
+  width: 100%;
   border-radius: 10px 0 0 10px;
   box-shadow: 2px 2px 5px black;
 }
@@ -223,6 +224,10 @@
   color: white;
 }
 
+.item-price {
+  color: gray;
+}
+
 #delete-button {
   background-color: var(--menuspoon-brand-color);
   border: none;
@@ -230,4 +235,30 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 0 12.5% 0 12.5%;
+}
+
+#name-form, #description-form, #price-form, #category-form, #picture-form {
+  width: 100%;
+}
+#go-back {
+  background-color: var(--menuspoon-brand-color);
+  color: white;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 12.5% 0 12.5%;
+  border-radius: 5px;
+}
+
+#go-back-text:link, #go-back-text:visited {
+  text-decoration: none;
+  color: white;
 }

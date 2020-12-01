@@ -22,6 +22,12 @@
 
     <h3 id="find-menu-title">Find your menu:</h3>
     <div id="find-menu-buttons">
+        <div>
+            <a id="link-homepage" href="/restaurants">Search All Restaurants</a>
+        </div>
+        <div>
+            <a id="link-homepage" href="/restaurants">Search All Menus</a>
+        </div>
         <% if(user) { %>
         <div>
             <a id="link-homepage" href="/favorited-menus">Your saved menus</a>
@@ -29,18 +35,16 @@
         <div>
             <a id="link-homepage" href="/favorited-menus">Your menus</a>
         </div>
+        <div>
+            <a id="link-homepage" href="/logout">Logout</a>
+        </div>
+        <% } else { %>
+        <div>
+            <a id="link-homepage" href="/">Login</a>
+        </div>
         <% } %>
         <div>
-            <a id="link-homepage" href="/restaurants">Search All Restaurants</a>
-        </div>
-        <div>
-            <a id="link-homepage" href="/menus">Search All Menus</a>
-        </div>
-        <div>
             <a id="link-homepage" href="/menus">Contact Support</a>
-        </div>
-        <div>
-            <a id="link-homepage" href="/menus">Test</a>
         </div>
     </div>
     <footer>

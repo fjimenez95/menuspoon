@@ -4,38 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Menu Item</title>
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Font Awesome Kits -->
+    <script src="https://kit.fontawesome.com/80757eb980.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header id="restaurant-list-header">
+        <img src="/images/menuspoon_logo.jpg" alt="menu spoon" width="100">
+        <h2 id="restaurant-list-title" style="text-align: right">New Menu Item</h2>
+    </header>
     <h1>New Menu Item</h1>
-    <form action="/menus/<%=menu._id%>/foodItems" method="POST">
-        <label>Name:
-            <input type="text" name="name">
-        </label>
-        <br>
-        <label>Description:
-            <input type="text" name="description">
-        </label>
-        <br>
-        <label>Price:
-            <input type="text" name="price">
-        </label>
-        <br>
-        <label>Category:
-            <select name="category">
-                <option value="appetizers">Appetizers</option>
-                <option value="soups">Soups</option>
-                <option value="entrees">Entrees</option>
-                <option value="desserts">Desserts</option>
-                <option value="drinks">Drinks</option>
-            </select>
-        </label>
-        <label>Picture
-            <input type="text" name="picture">
-        </label>
-        <br>
-            <input type="submit" value="Add Food Item">
-    </form>
-    <a href="/menus/:id">Go back</a>
+    <main class="short-header">
+        <article id="new-form">
+            <form action="/menus/<%=menu._id%>/foodItems" method="POST">
+                <label>Name:
+                    <input id="name-form" type="text" name="name">
+                </label>
+                <br>
+                <label>Description:
+                    <input id="description-form" type="text" name="description">
+                </label>
+                <br>
+                <label>Price:
+                    <input id="price-form" type="text" name="price">
+                </label>
+                <br>
+                <label>Category:
+                    <select id="category-form" name="category">
+                        <option value="appetizers">Appetizers</option>
+                        <option value="soups">Soups</option>
+                        <option value="entrees">Entrees</option>
+                        <option value="desserts">Desserts</option>
+                        <option value="drinks">Drinks</option>
+                    </select>
+                </label>
+                <br>
+                <label>Picture
+                    <input id="picture-form" type="text" name="picture">
+                </label>
+                <br>
+                    <input type="submit" value="Add Food Item">
+            </form>
+        </article>
+        <div id="go-back">
+        <a id="go-back-text" href="/menus/<%=menu._id%>">Go back</a>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <a class="footer-icons" href="/home"><i class="fas fa-home"></i></a>
+        </div>
+        <div>
+            <a class="footer-icons" href="/restaurants"><i class="fas fa-utensils"></i></a>
+        </div>
+        <div>
+            <a class="footer-icons" href="/favorites"><i class="fas fa-star"></i></a>
+        </div>
+        <% if(user) { %>
+        <div>
+            <a class="footer-icons" href="/menus/<%= menu._id %>/new"><i class="fas fa-plus"></i></a>
+        </div>
+        <% } else { %>
+        <div>
+            <a class="footer-icons" href="/"><i class="fas fa-sign-in-alt"></i></a>
+        </div>
+        <% } %>
+    </footer>
 </body>
 </html>
 

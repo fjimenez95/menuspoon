@@ -23,6 +23,6 @@ function show(req, res) {
 
 function newItem(req, res) {
     Menu.findById(req.params.id, function(err, menu) {
-        res.render('menus/new', { menu });
+        res.render('menus/new', { menu, user: req.user });
     });
 }
