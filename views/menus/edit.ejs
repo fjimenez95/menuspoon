@@ -45,7 +45,7 @@
             <br>
             <input type="submit" value="Edit Food Item">
             <div id="go-back">
-                <a id="go-back-text" href="/menus/<%=parentMenuId%>">Go back</a>
+                <a id="go-back-text" href="/restaurants">Go back to restauants</a>
             </div>
         </form>
     </main>
@@ -61,7 +61,7 @@
         </div>
         <% if(user) { %>
         <div>
-            <a class="footer-icons" href="/menus/<%= menu._id %>/new"><i class="fas fa-plus"></i></a>
+            <a class="footer-icons" href="/menus/<%= foodItemId %>/new"><i class="fas fa-plus"></i></a>
         </div>
         <% } else { %>
         <div>
