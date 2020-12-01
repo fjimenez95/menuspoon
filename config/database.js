@@ -5,12 +5,11 @@ const mongoose = require('mongoose');
 const db = mongoose.connection;
 
 // CONNECT TO DATABASE SERVER
-mongoose.connect('mongodb://localhost/menuspoon',{ 
-    useNewUrlParser: true, 
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+});
 
 // CONNECTION LISTENER
 db.on('connected', function () {
