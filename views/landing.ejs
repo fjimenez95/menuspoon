@@ -11,20 +11,15 @@
 <body>
     <div id="landing-logo">
         <img src="/images/menuspoon_logo.jpg" alt="menu spoon" width="300">
-    </div>  
+    </div> 
+    <% if(user) { %>
+    <h1 id="main-welcome">welcome, <br> <%= user.name %></h1>
+    <% } else { %>
     <h1 id="main-welcome">welcome</h1>
-    <h3 id="sign-in">sign up or login</h3>
+    <% } %>
 
-    <div id="auth-buttons">
-        <div>
-            <p><a href="/auth/google">Login With Google</a></p>
-        </div>
-        <div>
-            <p><a href="/home">Continue without signing in</a></p>
-        </div>
-        <p></p>
-        <p></p>
-        <p id="rights-res">All Rights Reserved &copy; 2020</p>
-    </div>
+    <p>Find your menu:</p>
+    <a href="/restaurants">See All Restaurants</a>
+    <a href="/menus">See All Menus</a>
 </body>
 </html>
