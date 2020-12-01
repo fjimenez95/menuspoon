@@ -25,6 +25,7 @@ const foodItemSchema = new Schema({
     },
     rating: {
         type: Number,
+        default: 0,
     },
 });
 
