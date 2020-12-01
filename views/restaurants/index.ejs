@@ -5,49 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menuspoon - Restaurants</title>
     <!-- Google Fonts -->
+    <!-- RAILWAY -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap" rel="stylesheet">
     <!-- CSS Framework -->
     <link rel="stylesheet" href="/css/style.css" />
+    <!-- Font Awesome Kits -->
+    <script src="https://kit.fontawesome.com/80757eb980.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="restaurant-list-header">
         <img src="/images/menuspoon_logo.jpg" alt="menu spoon" width="100">
+        <h2 id="restaurant-list-title" style="text-align: right">Restaurants</h2>
     </header>
-    <main>
-    <% restaurants.forEach(restaurant => { %>
-        <article id="restaurant-block">
-            
-        </article>
-    <h1>Restaurants List</h1>
-    <table>
-        <thead>
-            <th>Restaurant Name</th>
-            <th>Address</th>
-        </thead>
-        <tbody>
-            <% restaurants.forEach(restaurant => { %>
-                <tr>
-                    <td><%= restaurant.name %></td>
-                    <td><%= restaurant.address %></td>
-                    <td><a href="/menus/<%= restaurant.menu %>">Menu</a></td>
-                </tr>
+    <main class="short-header">
+    <h1 id="thin-font" id="top-title">Where are you?</h1>
+        <% restaurants.forEach(restaurant => { %>
+            <a id="restaurant-page-main" href="/menus/<%= restaurant.menu %>">
+            <img id="restaurant-img" src="<%= restaurant.picture %>" alt="menu spoon" width="100">
+            <article id="restaurant-block" id="restaurant-page-main">
+                <p id="rest-name"><%= restaurant.name %></p>
+                <p id="rest-address"><%= restaurant.address %></p>
+            </article>
+        </a>
             <% }) %>
-        </tbody>
-    </table>
-    <a href="/restaurant/new">New Restaurant</a>
-    <a href="/">Go Back</a>
     </main>
     <footer>
         <div>
-            <a href="/restaurants">A</a>
+            <a class="footer-icons" href="/home"><i class="fas fa-home"></i></a>
         </div>
         <div>
-            <a href="/menus">B</a>
+            <a class="footer-icons" href="/restaurants"><i class="fas fa-utensils"></i></a>
         </div>
         <div>
-            <a href="/menus">C</a>
+            <a class="footer-icons" href="/favorites"><i class="fas fa-star"></i></a>
         </div>
         <div>
-            <a href="/menus">D</a>
+            <a class="footer-icons" href="/"><i class="fas fa-sign-in-alt"></i></a>
         </div>
     </footer>
 </body>

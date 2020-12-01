@@ -60,7 +60,10 @@ const restaurantSchema = new Schema({
     menu: {
         type: Schema.Types.ObjectId,
         ref: 'Restaurant',
-    }
+    },
+    picture: {
+        type: String,
+    },
 },
     {
         timestamps: true,

@@ -8,6 +8,7 @@ const router = express.Router();
 // DEFINE ROUTES
 router.get('/', menuCtrl.index);
 router.get('/:id', menuCtrl.show);
+router.get('/:id/new', menuCtrl.new);
 
 // EXPORT ROUTER OBJECT
 module.exports = router;

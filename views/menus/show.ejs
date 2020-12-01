@@ -4,26 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Menu</title>
+    <!-- Google Fonts -->
+    <!-- RAILWAY -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap" rel="stylesheet">
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Font Awesome Kits -->
+    <script src="https://kit.fontawesome.com/80757eb980.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <h1>Restaurant Menu</h1>
     <h3>Name: <%= restaurant.name %></h3>
-    <h3>Appetizers</h3>
+    <header id="restaurant-list-header">
+        <img src="/images/menuspoon_logo.jpg" alt="menu spoon" width="100">
+        <h2 id="restaurant-list-title" style="text-align: right"><%= restaurant.name %></h2>
+    </header>
+    <main class="short-header">
+    <h3 class="menu-header">Appetizers</h3>
     <% menu.appetizers.forEach(item => { %>
-    <div><%= item.name %></div>
-    <% }) %>
-    <h3>Soups</h3>
+    <div id="menu-page-main">
+        <img id="menu-img" src="<%= item.picture %>" alt="<%= item.name %>" width="100">
+        <div id="menu-block">
+            <p class="item-name"><%= item.name %></p>
+            <p class="item-desc"><%= item.description %></p>
+            <p class="item-price"><%= item.price %></p>
+        </div>
+        <% if(user) { %>
+            <div class="menu-bottom-button">
+                <form action="/menus/<%= item._id %>?_method=DELETE" method="POST" class="delete-item">
+                    <button id="delete-button" type="submit"><i class="fas fa-trash-alt"></i>Delete</button>
+                </form>
+            </div>
+            <div class="menu-bottom-button">
+                <a id="no-decoration" href="/menus/<%= item._id %>/edit"><i class="fas fa-edit"></i>Edit</a>
+            </div>
+            <div class="menu-bottom-button">
+                <a id="no-decoration" href="/menus/"><i class="fas fa-star"></i>Favorite</a>
+            </div>
+            <% } %>
+        </div>
+        <% }) %>
+
+    <h3 class="menu-header">Soups</h3>
     <% menu.soups.forEach(item => { %>
-    <div><%= item.name %></div>
-    <% }) %>
-    <h3>Entrees</h3>
+    <div id="menu-page-main">
+        <img id="menu-img" src="<%= item.picture %>" alt="<%= item.name %>" width="100">
+        <div id="menu-block">
+            <p class="item-name"><%= item.name %></p>
+            <p class="item-desc"><%= item.description %></p>
+            <p class="item-price"><%= item.price %></p>
+        </div>
+        <% if(user) { %>
+            <div class="menu-bottom-button">
+                <form action="/menus/<%= item._id %>?_method=DELETE" method="POST" class="delete-item">
+                    <button id="delete-button" type="submit"><i class="fas fa-trash-alt"></i>Delete</button>
+                </form>
+            </div>
+            <div class="menu-bottom-button">
+                <a id="no-decoration" href="/menus/<%= item._id %>/edit"><i class="fas fa-edit"></i>Edit</a>
+            </div>
+            <div class="menu-bottom-button">
+                <a id="no-decoration" href="/menus/"><i class="fas fa-star"></i>Favorite</a>
+            </div>
+            <% } %>
+        </div>
+        <% }) %>
+
+    <h3 class="menu-header">Entrees</h3>
     <% menu.entrees.forEach(item => { %>
-    <div><%= item.name %></div>
-    <% }) %>
+    <div id="menu-page-main">
+        <img id="menu-img" src="<%= item.picture %>" alt="<%= item.name %>" width="100">
+        <div id="menu-block">
+            <p class="item-name"><%= item.name %></p>
+            <p class="item-desc"><%= item.description %></p>
+            <p class="item-price"><%= item.price %></p>
+        </div>
+        <% if(user) { %>
+            <div class="menu-bottom-button">
+                <form action="/menus/<%= item._id %>?_method=DELETE" method="POST" class="delete-item">
+                    <button id="delete-button" type="submit"><i class="fas fa-trash-alt"></i>Delete</button>
+                </form>
+            </div>
+            <div class="menu-bottom-button">
+                <a id="no-decoration" href="/menus/<%= item._id %>/edit"><i class="fas fa-edit"></i>Edit</a>
+            </div>
+            <div class="menu-bottom-button">
+                <a id="no-decoration" href="/menus/"><i class="fas fa-star"></i>Favorite</a>
+            </div>
+            <% } %>
+        </div>
+        <% }) %>
+
+    <h3 class="menu-header">Desserts</h3>
+    <% menu.desserts.forEach(item => { %>
+    <div id="menu-page-main">
+        <img id="menu-img" src="<%= item.picture %>" alt="<%= item.name %>" width="100">
+        <div id="menu-block">
+            <p class="item-name"><%= item.name %></p>
+            <p class="item-desc"><%= item.description %></p>
+            <p class="item-price"><%= item.price %></p>
+        </div>
+        <% if(user) { %>
+            <div class="menu-bottom-button">
+                <form action="/menus/<%= item._id %>?_method=DELETE" method="POST" class="delete-item">
+                    <button id="delete-button" type="submit"><i class="fas fa-trash-alt"></i>Delete</button>
+                </form>
+            </div>
+            <div class="menu-bottom-button">
+                <a id="no-decoration" href="/menus/<%= item._id %>/edit"><i class="fas fa-edit"></i>Edit</a>
+            </div>
+            <div class="menu-bottom-button">
+                <a id="no-decoration" href="/menus/"><i class="fas fa-star"></i>Favorite</a>
+            </div>
+            <% } %>
+        </div>
+        <% }) %>
+
+    <h3 class="menu-header">Drinks</h3>
+    <% menu.drinks.forEach(item => { %>
+    <div id="menu-page-main">
+        <img id="menu-img" src="<%= item.picture %>" alt="<%= item.name %>" width="100">
+        <div id="menu-block">
+            <p class="item-name"><%= item.name %></p>
+            <p class="item-desc"><%= item.description %></p>
+            <p class="item-price"><%= item.price %></p>
+        </div>
+        <% if(user) { %>
+            <div class="menu-bottom-button">
+                <form action="/menus/<%= item._id %>?_method=DELETE" method="POST" class="delete-item">
+                    <button id="delete-button" type="submit"><i class="fas fa-trash-alt"></i>Delete</button>
+                </form>
+            </div>
+            <div class="menu-bottom-button">
+                <a id="no-decoration" href="/menus/<%= item._id %>/edit"><i class="fas fa-edit"></i>Edit</a>
+            </div>
+            <div class="menu-bottom-button">
+                <a id="no-decoration" href="/menus/"><i class="fas fa-star"></i>Favorite</a>
+            </div>
+            <% } %>
+        </div>
+        <% }) %>
 
 <!-- TODO: ADD NEW ITEM ON MENU -->
-    <!-- <a href="/restaurant/new">New Item</a> -->
+    </main>
+    <a href="/menus/<%= menu._id %>/new">New Item</a>
     <a href="/">Go Back</a>
-
+    <footer>
+        <div>
+            <a class="footer-icons" href="/home"><i class="fas fa-home"></i></a>
+        </div>
+        <div>
+            <a class="footer-icons" href="/restaurants"><i class="fas fa-utensils"></i></a>
+        </div>
+        <div>
+            <a class="footer-icons" href="/favorites"><i class="fas fa-star"></i></a>
+        </div>
+        <% if(user) { %>
+        <div>
+            <a class="footer-icons" href="/menus/<%= menu._id %>/new"><i class="fas fa-plus"></i></a>
+        </div>
+        <% } else { %>
+        <div>
+            <a class="footer-icons" href="/"><i class="fas fa-sign-in-alt"></i></a>
+        </div>
+        <% } %>
+    </footer>
 </body>
 </html>
